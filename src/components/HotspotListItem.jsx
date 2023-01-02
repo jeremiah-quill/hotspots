@@ -1,6 +1,6 @@
 export function HotspotListItem({ hotspot, onChange, removeHotspot, number }) {
   return (
-    <div className="grid grid-cols-6 justify-items-center gap-2 items-center">
+    <div className="grid grid-cols-4 justify-items-center gap-2 items-center">
       <h2>{number}</h2>
       <div>
         <label htmlFor="name" className="sr-only">
@@ -23,35 +23,6 @@ export function HotspotListItem({ hotspot, onChange, removeHotspot, number }) {
           type="text"
           value={hotspot.description}
           name="description"
-          onChange={(e) => onChange(e, hotspot.id)}
-        />
-      </div>
-      <div>
-        <label htmlFor="x" className="sr-only">
-          X:
-        </label>
-        <input
-          className="w-full"
-          type="range"
-          name="x"
-          min="0"
-          max="100"
-          value={hotspot.x}
-          onChange={(e) => onChange(e, hotspot.id)}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="y" className="sr-only">
-          Y:
-        </label>
-        <input
-          className="w-full"
-          type="range"
-          name="y"
-          min="0"
-          max="100"
-          value={hotspot.y}
           onChange={(e) => onChange(e, hotspot.id)}
         />
       </div>

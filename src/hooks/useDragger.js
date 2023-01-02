@@ -17,12 +17,11 @@ export function useDragger(elementRef, containerRef) {
     let yOffset = 0;
 
     const mouseDownHandler = (event) => {
-      initialX = event.clientX - xOffset;
-      initialY = event.clientY - yOffset;
-
       if (event.target === element) {
         isDragging = true;
       }
+      initialX = event.clientX - xOffset;
+      initialY = event.clientY - yOffset;
     };
 
     const mouseMoveHandler = (event) => {
